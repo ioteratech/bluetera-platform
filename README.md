@@ -1,6 +1,6 @@
 # About
 Product based repository that includes information, links and files to get you started 
-# Bluetera Platform [<img align="right" img src="images/IOTERA-By-TENSOR-1_w100.png" alt="Logo"/>](https://israeli.achler.org/lotera/) 
+# Bluetera Platform [<img align="right" img src="docs/images/IOTERA-By-TENSOR-1_w100.png" alt="Logo"/>](https://ioteratech.com/) 
 Bluetera is an open source IoT platform for the development of smart and connected products. Bluetera platform is comprised of three main elements that are the building blocks of most IoT systems:
 * Tiny hardware-based sensor hub to collect and analyze data; 
 * wireless communication to link between the digital and physical side;
@@ -28,9 +28,9 @@ This walkthrough provides a high level guide for using the bluetera platform. de
 <a name="references"></a>
 
 # References [^](#up)
-Firmware [repository](https://bitbucket.org/tensor-tech/bluetera/src/master/firmware/).  
-Windows SDK repository.  
-Android SDK [repository](https://bitbucket.org/tensor-tech/bluetera_sdk/src/master/). 
+Firmware [repository](https://github.com/ioteratech/bluetera-firmware).  
+Windows SDK [repository](https://github.com/ioteratech/bluetera-windows-sdk).  
+Android SDK repository (Comming Soon). 
 <a name="system"></a>
 # System Overview [^](#up) 
 The Blutera platform includes the following major components 
@@ -39,7 +39,7 @@ The Blutera platform includes the following major components
 * Blutera SDK 
 * BLE CSR 4.0 dongle (for widows and Linux)
   
- ![Blutera Platfor](images/bluetera_platform.jpg)
+ ![Blutera Platfor](docs/images/bluetera_platform.jpg)
  
  <a name="hw"></a>
  ## Hardware  module [^](#up)
@@ -98,15 +98,15 @@ The software includes the following features:
 3. Insert the supplied CSR 4.0 BLE dongle to free USB port
 4. Run ZADIG (1) 
 
-![BLE Driver](images/zadig1.jpg)
+![BLE Driver](docs/images/zadig1.jpg)
 5. Choose Options => List All Devices (2)
 
-![BLE Driver](images/zadig2.jpg)
+![BLE Driver](docs/images/zadig2.jpg)
 6. Choose CSR 4.0 BLE dongle (3)
 7. Make sure WinUSB driver is chosen (4)
 8. Press Replace Driver (5) 
 
-![BLE Driver](images/zadig3.jpg)
+![BLE Driver](docs/images/zadig3.jpg)
 
 <a name="fw_dbg"></a>
 ## Firmware Update / Firmware Debug (Wired) [^](#up)
@@ -119,7 +119,7 @@ The software includes the following features:
 2. Preperation
   * Solder 4 wires to Bluetera pads - VCC, GND, CLK and SIO, shown on the right side of the following image: 
   
-  ![Bluetera Extensions](images/bluetera_PRG_w300.jpg)
+  ![Bluetera Extensions](docs/images/bluetera_PRG_w300.jpg)
 * prepare the PCA10040 board: 
   *  make sure SW8 is off
   *  SW9 (nRF power source) should be on 'VDD'
@@ -132,7 +132,7 @@ The software includes the following features:
    *  Bluetera  SIO to P20, SWD_IO pin
    *  **When no battery is connected to the Bluetera, you should also connect  Bluetera VCC to P20, VDD_nRF. Otherwise - don't.** Following images illustrate the connection without battery: 
      
-![Bluetera No Bat](images/bluetera_PRG_4_w300.jpg)
+![Bluetera No Bat](docs/images/bluetera_PRG_4_w300.jpg)
 3. Programming:
   * Connect the PCA10040 board to a PC via USB.
   * Turn it on (SW6), and wait until drivers are installed
@@ -146,34 +146,34 @@ The software includes the following features:
 1. Prerequisite : Initial FW with a Boot loader.   
 2. Get Nordic NRF Connect App from the Android / IoS App store 
 
-![Blutera Platfor](images/NRF.jpg)
+![Blutera Platfor](docs/images/NRF.jpg)
 
 3. Get the latest FW update (app_dfu_package.zip) and store on your mobile 
 4. Turn Bluetera device on – observe that the BLUE Led is blinking slowly (1-sec rate)
 5. Scan for Bluetooth devices and find BLUETERA (1) 
 
-![Blutera Platform](images/NRF1.jpg)
+![Blutera Platform](docs/images/NRF1.jpg)
 
 6. Connect to device – Observe that the BLUE Led is blinking faster BLUETERA 
 7. Click on the DFU button (Adjutant to the DICONNECT Menu item in NRF App) (2) 
 
-![Blutera Platform](images/NRF2.jpg)
+![Blutera Platform](docs/images/NRF2.jpg)
 
 8. Select a new Distribution packet (ZIP) (3) 
 
-![Blutera Platform](images/NRF3.jpg) 
+![Blutera Platform](docs/images/NRF3.jpg) 
 
-![Blutera Platform](images/NRF4.jpg)
+![Blutera Platform](docs/images/NRF4.jpg)
 
 9. Bootloader should begin – Click on the BLUETERA device to observe progress
 
-![Blutera Platform](images/NRF5.jpg)
+![Blutera Platform](docs/images/NRF5.jpg)
 
 10. Wait till update process completes 
 
 <a name="win_demo"></a>
 # Initial Usage (Windows Iotera Logger Demo) [^](#up)
-Iotera logger demo is a Windows open source app that illustraits the usage of the IMU module and data logging. The source code and app can be found in the following repository <Link>
+Iotera logger demo is a Windows open source app that illustraits the usage of the IMU module and data logging. The source code and app can be found in the following [repository] (https://github.com/ioteratech/bluetera-windows-sdk)
 1. Prerequisite:
  * Machine with windows operating system 
  * Bluetera device with firmware that fits the Logger APIs
@@ -187,11 +187,11 @@ Iotera logger demo is a Windows open source app that illustraits the usage of th
 
 * Click Logging and enable. You can also set the log path 
 
-![Blutera Logger](images/logger-2.jpg)
+![Blutera Logger](docs/images/logger-2.jpg)
 
 * Click start (1). The app should pair to the first BT module it detects (2) and outline its MAC number 
 
-![Blutera Logger](images/logger-3.jpg)
+![Blutera Logger](docs/images/logger-3.jpg)
 
 * You can stop the logging and also reset the cube by clicking the corresponding button at menu (1)
 * The data section (3) presents Acceleration data (3 axis); Quaternion data and Euler angles - all in realtime (default data sampling is 50hz)
@@ -200,10 +200,10 @@ Iotera logger demo is a Windows open source app that illustraits the usage of th
 
 <a name="cont"></a> 
 # Contributing [^](#up)
-1. Boaz Aizenshtark
-2. Tomer Abramovich
-3. Avi Rabinovich
+1. Boaz Aizenshtark - [Iotera Technologies](https://ioteratech.com/) 
+2. Tomer Abramovich - [Iotera Technologies](https://ioteratech.com/) 
+3. Avi Rabinovich - [Iotera Technologies](https://ioteratech.com/) 
 
 <a name="license"></a> 
 # License [^](#up)
-1. [MIT](https://choosealicense.com/licenses/mit/)
+1. This project is licensed under the MIT License - see the [LICENSE](https://choosealicense.com/licenses/mit/) file for details.
